@@ -17,7 +17,7 @@ def welcome():
 # Обработчик запросов от Яндекс Алисы
 @app.route('/')
 def alice_request():
-    return jsonify(welcome())
+    return "Hello world"
 
 if __name__ == '__main__':
     app.run(debug=True)
