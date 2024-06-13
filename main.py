@@ -25,4 +25,5 @@ def hello():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', ssl_context='adhoc')
+    context = ("server.crt", "server.key")
+    app.run(host='0.0.0.0', ssl_context=context)
