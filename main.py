@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from wakeonlan import send_magic_packet
+from wol_test import wol_pc
 
 
 app = Flask(__name__)
@@ -19,7 +19,7 @@ def welcome():
 # Обработчик запросов от Яндекс Алисы
 @app.route('/', methods=['GET', 'POST'])
 def alice_request():
-    send_magic_packet("D8:43:AE:21:83:87")
+    wol_pc()
     return jsonify(welcome())
 
 @app.route('/hello')
