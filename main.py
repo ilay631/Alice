@@ -9,7 +9,7 @@ app = Flask(__name__)
 def welcome():
     return {
         "response": {
-            "text": "Привет! Я готова помочь вам Илья Батькович!",
+            "text": "Привет! Я готова помочь вам Илья Батькович! Hui Pizda",
             "end_session": False
         },
         "version": "1.0"
